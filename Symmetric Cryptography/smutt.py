@@ -25,7 +25,7 @@ def main(ef: str, cf: str, address: str, p: str = ""):
 
         with console.status(f"Sending email to {address} with attacched {cf}..."):
             echo = subprocess.Popen(["echo", "Steghide email test"], stdout=subprocess.PIPE)
-            mutt_output = subprocess.check_output(["mutt", "-s", "Steghide email test", address, "a", cf], stdin=echo.stdout, stderr=subprocess.PIPE)
+            mutt_output = subprocess.check_output(["mutt", "-s", "Steghide email test", address, "-a", cf], stdin=echo.stdout, stderr=subprocess.PIPE)
             console.log(f"[bold red]Email Sent[/bold red]")
     
 
