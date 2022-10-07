@@ -1,5 +1,8 @@
 #/usr/bin/python3
 
+# sudo pip3 install typer[all] 
+# sudo pip3 install rich
+
 import subprocess
 from time import sleep
 import typer
