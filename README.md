@@ -3,3 +3,4 @@
 ## Exercises
 * Symmetric Cryptography
   * cryptograph.py
+  * smutt.py
