@@ -16,6 +16,3 @@ To execute the full exercise, follow these steps
 * Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -k <PASSWORD_KEY> -base64`
 
 ######Note that, in this exercise, <CYPHER> value is `pbkdf2` <PASSWORD_KEY> value is `NS_ArpSpoofingPassword` and 
-
-# MAC FLOODING
-A MAC flooding is a technique employed to compromise the security of network switches. The attack works by forcing legitimate MAC table contents out of the switch and forcing a unicast flooding behavior potentially sending sensitive information to portions of the network where it is not normally intended to go
