@@ -6,26 +6,23 @@
 
 import subprocess
 import os
-from time import sleep
 import typer
 from rich.console import Console
-from rich.panel import Panel
-from rich.text import Text
 console = Console()
 
 
-def main(ef: str, cf: str, sf: str, address: str, p: str = ""):
+def main(ef: str, cf: str, sf: str, address: str, pwd: str = ""):
 
     if (os.path.exists(ef) and os.path.exists(cf)):
         with console.status(f"Hiding {ef} into {cf}..."):
-            steghide_args = ["steghide", "embed", "-ef", ef, "-cf", cf, "-sf", sf, "-p", p]
+            steghide_args = ["steghide", "embed", "-ef", ef, "-cf", cf, "-sf", sf, "-p", pwd]
             steghide = subprocess.Popen(steghide_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             steghide.communicate()
         console.log(f"[bold green]Hid {ef} into {cf} successfully![/bold green]")
 
         with console.status(f"Sending email to {address} with attacched {cf}..."):
             echo = subprocess.Popen(["echo", "Steghide email test"], stdout=subprocess.PIPE)
-            mutt_output = subprocess.check_output(["mutt", "-s", "Steghide email test", address, "-a", sf], stdin=echo.stdout, stderr=subprocess.PIPE)
+            subprocess.check_output(["mutt", "-s", "Steghide email test", address, "-a", sf], stdin=echo.stdout, stderr=subprocess.PIPE)
             console.log(f"[bold red]Email Sent[/bold red]")
     
 
