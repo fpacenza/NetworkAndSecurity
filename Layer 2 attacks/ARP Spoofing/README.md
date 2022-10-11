@@ -12,7 +12,7 @@ To execute the full exercise, follow these steps
 * Execute `sudo tshark -Y "udp && ip.dst==<HOST_2_IP>" -T fields -e data > raw-data.txt`  
 * Wait some seconds
 * Convert the `raw-data.txt` file in **_base64_** `cat raw-data.txt | xxd -r -p > output.txt`
-* Open the `output.txt`, find the password and the encription algorithm
+* Open the `output.txt`, find the password and the encryption algorithm
 * Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -k <PASSWORD_KEY> -base64`
 
-######Note that, in this exercise, <CYPHER> value is `pbkdf2` <PASSWORD_KEY> value is `NS_ArpSpoofingPassword` and 
+######Note that, in this exercise, <CYPHER> value is `pbkdf2` whereas <PASSWORD_KEY> value is `NS_ArpSpoofingPassword` 
