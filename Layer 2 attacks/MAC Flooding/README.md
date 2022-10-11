@@ -14,4 +14,4 @@ To execute the full exercise, follow these steps
 * Open the `output.txt`, find the password and the encryption algorithm
 * Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -k <PASSWORD_KEY> -base64`
 
-######Note that, in this exercise, **\<CYPHER\>** value is `pbkdf2` whereas **\<PASSWORD_KEY\>** value is `NS_MacFloodingKey`
+###### Note that, in this exercise, **\<CYPHER\>** value is `pbkdf2` whereas **\<PASSWORD_KEY\>** value is `NS_MacFloodingKey`
