@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 
 # sudo pip3 install typer[all] 
 # sudo pip3 install rich
