@@ -21,4 +21,4 @@ In order to execute the script follow these steps:
  * Install and configure `mutt` service on your laptop `sudo apt install mutt`
  * Install `steghide` command `sudo apt install steghide`
  * Run the `smutt.py` script
- * `python3 smutt.py <path/to/file/to/embed> <path/to/file/to/image.jpg> output.jpg <your_email@domain.com> --pwd pass`
+ * `python3 smutt.py <path/to/file/to/embed> <path/to/image.jpg> output.jpg <your_email@domain.com> --pwd pass`
