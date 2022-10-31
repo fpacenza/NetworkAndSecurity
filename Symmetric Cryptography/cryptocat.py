@@ -12,8 +12,8 @@ from rich.text import Text
 console = Console()
 
 
-def main(port: str, listen: bool = False, hostname: str = "localhost", key: str = "key", algorithm: str = "-pbkdf2"):
-    openssl_args = ["openssl","enc", "-a", algorithm, "-k", key, "-base64"]
+def main(port: str, listen: bool = False, hostname: str = "localhost", key: str = "key", algorithm: str = "-aes-256-cbc"):
+    openssl_args = ["openssl","enc", "-a", algorithm, "-pbkdf2", "-k", key, "-base64"]
     if listen:
         openssl_args.append("-d")
         netcat = subprocess.Popen(["netcat", "-l", port], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
