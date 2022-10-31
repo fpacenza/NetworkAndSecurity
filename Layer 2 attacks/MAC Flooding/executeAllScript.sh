@@ -21,7 +21,7 @@ while IFS='\n' read -ra line; do
             echo "RETRIVED PASSWORD AND ALGORITHM..."
         elif [[ -z "$key" ]] && [[ -z "$algorithm" ]]; then
             echo "OK"
-            echo $base64_line | openssl enc -d -a $algorithm -k $key -base64
+            echo $base64_line | openssl enc -d -a $algorithm -pbkdf2 -k $key -base64
         fi
 #        echo $base64_line
     done
