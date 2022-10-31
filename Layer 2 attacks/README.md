@@ -13,7 +13,7 @@ To execute the full exercise, follow these steps
 * Wait some seconds
 * Convert the `raw-data.txt` file in **_base64_** `cat raw-data.txt | xxd -r -p > output.txt`
 * Open the `output.txt`, find the password and the encription algorithm
-* Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -k <PASSWORD_KEY> -base64`
+* Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -pbkdf2 -k <PASSWORD_KEY> -base64`
 
 ###### Note that, in this exercise, **\<CYPHER\>** value is `-aes-256-cbc` whereas **\<PASSWORD_KEY\>** value is `NS_ArpSpoofingPassword`. We use `pbkdf2` as key derivation function.
 
@@ -30,6 +30,6 @@ To execute the full exercise, follow these steps
 * Wait some seconds
 * Convert the `raw-data.txt` file in **_base64_** `cat raw-data.txt | xxd -r -p > output.txt`
 * Open the `output.txt`, find the password and the encryption algorithm
-* Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -k <PASSWORD_KEY> -base64`
+* Use the **openssl enc** to decrypt data `cat output.txt | openssl enc -d -a <CYPHER> -pbkdf2 -k <PASSWORD_KEY> -base64`
 
 ###### Note that, in this exercise, **\<CYPHER\>** value is `-aes-256-cbc` whereas **\<PASSWORD_KEY\>** value is `NS_MacFloodingKey`. We use `pbkdf2` as key derivation function.
