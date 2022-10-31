@@ -5,8 +5,8 @@ from rich.panel import Panel
 from rich.text import Text
 console=Console()
 
-message_crypted = "Q29tcGxpbWVudGksIGFycCBzcG9vZmluZyBhbmRhdG8gYSBidW9uIGZpbmUK\n"
-message_clear = "Hi, the password is: NS_ArpSpoofingKey and the cypher algorithm is pbkdf2\n"
+message_crypted = "U2FsdGVkX18QVKIzMhbdCUFZWiInnxi78d+4WyC2YU/9u8lMI0aPzeMu+2ke8IciV1lZWXt8llikuPM/+1ytIQ==\n"
+message_clear = "Hi, the password is: NS_ArpSpoofingKey and the cypher algorithm is -aes-256-cbc\n"
 def main(ip_src_h1: str, ip_dst_h2: str, src_port: int=1234, dst_port: int=4444):
     with console.status("Sending Packages..."):
         eth=Ether()/IP(src=ip_src_h1, dst=ip_dst_h2)
