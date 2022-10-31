@@ -18,4 +18,4 @@ To execute the full exercise, follow these steps
 
 
 
-###### Note that, in this exercise, **\<CYPHER\>** value is `pbkdf2` whereas **\<PASSWORD_KEY\>** value is `NS_ArpSpoofingPassword` 
+###### Note that, in this exercise, **\<CYPHER\>** value is `-aes-256-cbc` whereas **\<PASSWORD_KEY\>** value is `NS_ArpSpoofingPassword`. We use `pbkdf2` as key derivation function.
