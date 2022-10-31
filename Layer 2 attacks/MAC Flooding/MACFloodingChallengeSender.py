@@ -3,8 +3,8 @@ import typer
 from rich.console import Console
 console=Console()
 
-message_crypted = "Q29uZ3JhdHVsYXRpb24sIE1BQyBGbG9vZGluZyBhdHRhY2sgcGVyZm9ybWVkCg==\n"
-message_clear = "Hi, the password is: NS_MacFloodingKey and the cypher algorithm is pbkdf2\n"
+message_crypted = "U2FsdGVkX1+piUBN/olwZVB0f1qlv4Rx9qgKrkSLlWzyZetukMEpwRA5MFZdcQJZ/rH5Didw9zbjPWYFO3gj/w==\n"
+message_clear = "Hi, the password is: NS_MacFloodingKey and the cypher algorithm is -aes-256-cbc\n"
 def main(ip_src_h1: str, ip_dst_h2: str, src_port: int=1234, dst_port: int=4444):
     with console.status("Sending Packages..."):
         eth=Ether()/IP(src=ip_src_h1, dst=ip_dst_h2)
