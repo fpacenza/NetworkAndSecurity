@@ -10,7 +10,7 @@ In order to run all the scripts, the following 2 Python3 modules must be install
 
 In order to execute the script follow these steps:
  * Run the `cryptocat.py` script in **server mode**: `python3 cryptocat.py --listen <PORT> --key mypassword --algorithm -aes-256-cbc -pbkdf2`
- * Run the `cryptocat.py` script in **client mode**: `python3 cryptocat.py <PORT> --key mypassword --algorithm -pbkdf2`
+ * Run the `cryptocat.py` script in **client mode**: `python3 cryptocat.py <PORT> --key mypassword --algorithm -aes-256-cbc -pbkdf2`
  * **BE CAREFUL:** password and decrypt algorithm **have to be** the same in server and client mode
  * Type some text in client console
 
