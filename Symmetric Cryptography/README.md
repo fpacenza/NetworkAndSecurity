@@ -5,12 +5,14 @@ Symmetric-key algorithms are algorithms for cryptography that use the same crypt
 In order to run all the scripts, the following 2 Python3 modules must be installed:
  * `sudo pip3 install typer[all] rich`
 
+## Base Netcat connection using `subprocess` module in Python3
+Download the `baseNetcatConnection.py` script in order to understand how to use subprocess library to execute Netcat via python3. 
 ## Cryptocat
 `cryptocat.py` is a Python script able to add encryption and decryption functionalities to the standard `netcat` linux command. Encryption and decryption are performed using the `openssl enc` command
 
 In order to execute the script follow these steps:
- * Run the `cryptocat.py` script in **server mode**: `python3 cryptocat.py --listen <PORT> --key mypassword --algorithm -aes-256-cbc -pbkdf2`
- * Run the `cryptocat.py` script in **client mode**: `python3 cryptocat.py <PORT> --key mypassword --algorithm -aes-256-cbc -pbkdf2`
+ * Run the `cryptocat.py` script in **server mode**: `python3 cryptocat.py --listen <PORT> --key mypassword --algorithm -aes-256-cbc`
+ * Run the `cryptocat.py` script in **client mode**: `python3 cryptocat.py <PORT> --key mypassword --algorithm -aes-256-cbc`
  * **BE CAREFUL:** password and decrypt algorithm **have to be** the same in server and client mode
  * Type some text in client console
 
