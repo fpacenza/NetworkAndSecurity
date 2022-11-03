@@ -11,4 +11,4 @@
 * [Asymmetric Cryptography](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Asymmetric%20Cryptography)
   * [httpsClientBasic.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Asymmetric%20Cryptography/httpsClientBasic.py)
   * [httpsClientAdvanced.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Asymmetric%20Cryptography/httpsClientAdvanced.py)
-  * [tlsSocketServerClient.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Asymmetric%20Cryptography/tlsSocketServerClient.py)
+  * [tlsSocketServerClient.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Asymmetric%20Cryptography/tlsSocketClientServer.py)
