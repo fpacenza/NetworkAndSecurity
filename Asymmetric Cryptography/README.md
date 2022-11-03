@@ -21,11 +21,10 @@ In order to execute the script follow these steps:
 
 In order to execute the script follow these steps:
  * Run the socket server `python3 tlsSocketClientServer.py --server`
-    * If necessary you can specify different `SERVER_HOST` address or `SERVER_PORT` through the optional argument
-<br/>
+    * If necessary you can specify different `SERVER_HOST` address or `SERVER_PORT` through the optional argument<br/>
     `SERVER_HOST` (default="127.0.0.1")<br/>
     `SERVER_PORT` (default=60000) 
  * Run the socket server `python3 tlsSocketClientServer.py --server`
-     * If necessary you can specify different `CLIENT_HOST` address or `CLIENT_PORT` through the optional argument<br/>
+    * If necessary you can specify different `CLIENT_HOST` address or `CLIENT_PORT` through the optional argument<br/>
     `CLIENT_HOST` (default="127.0.0.1")<br/>
     `CLIENT_PORT` (default=60002) 
