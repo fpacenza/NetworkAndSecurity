@@ -1,6 +1,6 @@
 # Network And Security
 
-## Exercises
+## Exercises - Solutions
 * [Symmetric Cryptography](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Symmetric%20Cryptography)
   * [baseNetcatConnection.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Symmetric%20Cryptography/baseNetcatConnection.py)
   * [cryptograph.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Symmetric%20Cryptography/cryptocat.py)
