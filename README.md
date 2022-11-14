@@ -13,4 +13,4 @@
   * [Arp Spoofing](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Layer%202%20attacks/ARP%20Spoofing)
   * [MAC Flooding](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Layer%202%20attacks/MAC%20Flooding)
 * [WEP and WPA Cracking](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/)
-  * [Wep](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/)
+  * [WEP](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/)
