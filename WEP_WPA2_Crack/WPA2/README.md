@@ -54,12 +54,13 @@ For example, in order to create a dictionary containing all the words from 5 to 
  * `crunch 5 8 qwertyuiopasdfghjklzxcvbnm -o dictionary.txt`
 
 In our exercises, we will use some dictionaries which can be downloaded from the Iternet. The first one is called `john dictionary` whereas the second one is called `rockyou dictionary`
- 1. `sudo su`
- 2. `sudo apt install john`
- 3. `mkdir /usr/share/rockyou`
- 4. `cd /usr/share/rockyou`
- 5. `wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt`
-
+```
+sudo su
+sudo apt install john
+mkdir /usr/share/rockyou
+cd /usr/share/rockyou
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+```
 After that, the dictionaries can be found in the `/usr/share/john` and `/usr/share/rockyou` folders, respectively.
 
 ## Start a `Bruteforce` attack
@@ -83,9 +84,11 @@ We can now start the bruteforce attack. We suggest to use `john` and/or `rockyou
 Computing rainbow tables takes exactly the same amount of time as a brute force, but searching the generated rainbow table takes a split second. So, if you want to test one handshake per an Access Point, then there is no difference between brute-force and using rainbow tables
 
 A `rainbow table` can be created using the `genpmk` command (starting from a dictionary) and can be used using `cowpatty` command
- 1. `sudo su` 
- 2. `apt install cowpatty`
- 3. `genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>`
+```
+sudo su
+apt install cowpatty
+genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>
+```
 
 Cowpatty can be executed in the following way
  * `cowpatty -d <OUTPUT_RAINBOW_TABLE> -r <OUTPUT_FILE_CAPTURE> -s <<NETWORK_SSID>> -2`

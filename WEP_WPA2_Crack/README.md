@@ -128,11 +128,13 @@ For example, in order to create a dictionary containing all the words from 5 to 
  * `crunch 5 8 qwertyuiopasdfghjklzxcvbnm -o dictionary.txt`
 
 In our exercises, we will use some dictionaries which can be downloaded from the Iternet. The first one is called `john dictionary` whereas the second one is called `rockyou dictionary`
- 1. `sudo su`
- 2. `sudo apt install john`
- 3. `mkdir /usr/share/rockyou`
- 4. `cd /usr/share/rockyou`
- 5. `wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt`
+```
+sudo su
+sudo apt install john
+mkdir /usr/share/rockyou
+cd /usr/share/rockyou
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+```
 
 After that, the dictionaries can be found in the `/usr/share/john` and `/usr/share/rockyou` folders, respectively.
 
