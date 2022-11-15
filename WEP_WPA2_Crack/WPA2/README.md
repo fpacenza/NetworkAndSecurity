@@ -1,8 +1,17 @@
 # Crack WPA2 Password
 ## How WPA2 works
+WPA2 uses dynamic key encryption, which regularly changes the key and makes it more difficult to crack.
 
-TO DO
+In a WPA2-personal network, individual clients on a network are given unique encryption keys when they provide a pre-shared key.
 
+WPA2 in mandatorily uses the **AES-CCMP** algorithm for encryption, which is much more powerful and robust than **TKIP**.
+
+Both WPA and WPA2 allow either EAP-based authentication, using RADIUS servers (Enterprise) or a **Pre-Shared key (PSK)** (personal)-based authentication schema.
+
+**WPA/WPA2 PSK** is vulnerable to a dictionary attack. The inputs required for this attack are the four-way WPA handshake between client and access point, and a wordlist that contains common passphrases. Then, using tools such as Aircrack-ng, we can try to crack the WPA/WPA2 PSK passphrase.
+
+An illustration of the four-way handshake is shown in the following image
+![alt text](https://static.packt-cdn.com/products/9781783280414/graphics/0414OS_04_15.jpg)
 
 # Read WiFi Network Interface Data
 

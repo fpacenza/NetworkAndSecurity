@@ -14,3 +14,4 @@
   * [MAC Flooding](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Layer%202%20attacks/MAC%20Flooding)
 * [WEP and WPA Cracking](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/)
   * [WEP](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/)
+  * [WPA2](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/)
