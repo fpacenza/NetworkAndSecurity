@@ -15,7 +15,7 @@ Generally WEP encryption works between wireless AP and wireless station (host). 
  5. Finally, data transfer takes place
 
 
-# READ WIFI NETWORK INTERFACE DATA
+# Read WiFi Network Interface Data
 
  1. Authenticate a superuser
  2. Execute `iw` command in order to find and manipulate your wireless devices and their configuration 
@@ -25,7 +25,7 @@ iw dev
 ```
 ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/1.%20iw%20dev.png?raw=true)
 
-# START CRACKING
+# Start Cracking
 
  * The first thing we have to do is to set our network card in *monitor mode* which allows to monitor all traffic received on a wireless channel
     * `airmon-ng start <INTERFACE_NAME>`
@@ -47,7 +47,7 @@ iw dev
     * `aircrack-ng <OUTPUT_FILE_CAPTURE> `
 ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/5.%20cracking.png?raw=true)
 
-## STOP MONITOR MODE
+## Stop Monitor Mode
 
 Remember to disable the **monitor mode** from your wireless network card
  * `airmon-ng stop <INTERFACE_NAME>`
