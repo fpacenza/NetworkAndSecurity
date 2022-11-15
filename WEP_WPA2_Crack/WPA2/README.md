@@ -12,7 +12,7 @@ TO DO
 sudo su 
 iw dev
 ```
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA/1.%20iw%20dev.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/1.%20iw%20dev.png?raw=true)
 
 # Start cracking
 
@@ -20,15 +20,15 @@ iw dev
     * `airmon-ng start <INTERFACE_NAME>`
  * Check again your network wireless card name using `iw dev` command
      * `iw dev`
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA/2.%20iw%20dev.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/2.%20iw%20dev.png?raw=true)
  * Let's now start `airodump-ng` in order to obtain some useful information about `AP Name`, `Channel` and `BSSID`
     * `airodump-ng <INTERFACE_NAME_MONITOR_MODE>`
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA/3.%20airodump-ng.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/3.%20airodump-ng.png?raw=true)
  * We can now start capturing some data using (again) `airodump-ng` command
    * `airodump-ng -c <NUM_CHANNEL> --bssid <AP_MAC_ADDRESS> -w <OUTPUT_FILE_CAPTURE> <INTERFACE_NAME_MONITOR_MODE>`
  * Our goal is to capture the **WPA2 handshake**. To do that, we try to de-authenticate all hosts connected to the AP using the `aireplay-ng` command; finally, we need to wait until at least one host will  auto reconnect to the AP
    * `aireplay-ng -0 2 -a <AP_MAC_ADDRESS> <INTERFACE_NAME_MONITOR_MODE>`
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA/4.%20airodump-ng%20capture.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/4.%20airodump-ng%20capture.png?raw=true)
 
  * Once the WPA2 handshake has been captured, we can start hacking the password 
 v
@@ -57,8 +57,7 @@ After that, the dictionaries can be found in the `/usr/share/john` and `/usr/sha
 We can now start the bruteforce attack. We suggest to use `john` and/or `rockyou` dictionary to complete the exercise before the end of the laboratory session
 
  * `aircrack-ng -w <YOUR_DICTIONARY_FILE> <OUTPUT_FILE_CAPTURE>.cap`
-
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA/5.%20bruteforce.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/5.%20bruteforce.png?raw=true)
 
 ## Stop Monitor Mode
 
