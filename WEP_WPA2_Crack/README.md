@@ -157,9 +157,11 @@ We can now start the bruteforce attack. We suggest to use `john` and/or `rockyou
 Computing rainbow tables takes exactly the same amount of time as a brute force, but searching the generated rainbow table takes a split second. So, if you want to test one handshake per an Access Point, then there is no difference between brute-force and using rainbow tables
 
 A `rainbow table` can be created using the `genpmk` command (starting from a dictionary) and can be used using `cowpatty` command
- 1. `sudo su` 
- 2. `apt install cowpatty`
- 3. `genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>`
+```
+sudo su
+apt install cowpatty
+genpmk -f <PATH_TO_DICTIONARY> -s <NETWORK_SSID> -d <OUTPUT_RAINBOW_TABLE>
+```
 
 Cowpatty can be executed in the following way
  * `cowpatty -d <OUTPUT_RAINBOW_TABLE> -r <OUTPUT_FILE_CAPTURE> -s <<NETWORK_SSID>> -2`
