@@ -15,7 +15,7 @@ An illustration of the four-way handshake is shown in the following image
 
 # Read WiFi Network Interface Data
 
- 1. Authenticate a superuser
+ 1. Authenticate as superuser
  2. Execute `iw` command in order to find and manipulate your wireless devices and their configuration 
 ```
 sudo su 
