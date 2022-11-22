@@ -9,7 +9,8 @@ BROADCAST = "FF:FF:FF:FF:FF:FF"
 def main(network_address: str = "10.0.0.0/24"):
     while 1:
         pkt = Ether(src=RandMAC(), dst=RandMAC())/ARP(op=2, psrc=network_address, hwdst=BROADCAST)
-        sendp(pkt)
+        with console.status("Sending Packets..."):
+            sendp(pkt)
 
 
 
