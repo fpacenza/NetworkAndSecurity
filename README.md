@@ -15,7 +15,7 @@
 * [Other MITM Attacks](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Other%20MITM%20Attacks)
   * [IP Spoofing](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Other%20MITM%20Attacks/IP%20Spoofing/)
   * [ARP Poisoning using Ettercap](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Other%20MITM%20Attacks/ARP%20Poisoning%20with%20Ettercap)
-  * [DHCP Spoofing using Ettercap](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Other%20MITM%20Attacks/DHCP%20Spoofing)
+  * [DNS Spoofing using Ettercap](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Other%20MITM%20Attacks/DNS%20Spoofing)
 * [WEP and WPA Cracking](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/)
   * [WEP](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WEP/)
   * [WPA2](https://github.com/fpacenza/NetworkAndSecurity/blob/main/WEP_WPA2_Crack/WPA2/)
