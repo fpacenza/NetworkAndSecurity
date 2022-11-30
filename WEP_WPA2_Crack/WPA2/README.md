@@ -55,7 +55,7 @@ For example, in order to create a dictionary containing all the words from 5 to 
 In our exercises, we will use some dictionaries which can be downloaded from the Iternet. The first one is called `john dictionary` whereas the second one is called `rockyou dictionary`
 ```
 sudo su
-sudo apt install john
+apt install john
 mkdir /usr/share/rockyou
 cd /usr/share/rockyou
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
