@@ -8,7 +8,7 @@ Generally WEP encryption works between wireless AP and wireless station (host). 
 
  2. The **AP** responds with an authentication response message consist of challenge text
 
- 3. Now the client uses its secret WEP key to encrypt the challenge text and sends it to the access access point
+ 3. Now the client uses its secret WEP key to encrypt the challenge text and sends it to the access point
 
  4. If the access point successfully decrypt the encrypted challenge and retrieve the original challenge text then it comes to know that the client is also using the same secret key. So responds with an **Confirmation Success** message
 
