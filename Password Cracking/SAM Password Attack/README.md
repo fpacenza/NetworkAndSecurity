@@ -58,12 +58,12 @@ Password and user list can be found in the following registry key
 
     3.2. Click on `load --> PWDUMP` and select the `users.txt` file
 
-    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/1.ophcrack_load.png?raw=true)
+    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/Password%20Cracking/SAM%20Password%20Attack/1.ophcrack_load.png?raw=true)
 
     3.3. Click on `tables` and select the previously downloaded `vista probabilistic free` table **folder**
     
-    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/2.ophcrack_table.png?raw=true)
+    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/Password%20Cracking/SAM%20Password%20Attack/2.ophcrack_table.png?raw=true)
 
     3.4. Click on `crack` and wait until the end
 
-    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/3.ophcrack_crack.png?raw=true)
+    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/Password%20Cracking/SAM%20Password%20Attack/3.ophcrack_crack.png?raw=true)
