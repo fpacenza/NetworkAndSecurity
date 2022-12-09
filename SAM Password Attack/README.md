@@ -62,8 +62,8 @@ Password and user list can be found in the following registry key
 
     3.3. Click on `tables` and select the previously downloaded `vista probabilistic free` table **folder**
     
-    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/1.ophcrack_table.png?raw=true)
+    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/3.ophcrack_crack.png?raw=true)
 
     3.4. Click on `crack` and wait until the end
 
-    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/1.ophcrack_crack.png?raw=true)
+    ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/SAM%20Password%20Attack/3.ophcrack_crack.png?raw=true)
