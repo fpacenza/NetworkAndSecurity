@@ -30,7 +30,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
  4. Install and enable **libapache2-mod-php**
         
         sudo apt install libapache2-mod-php*
-        sudo a2enmod php**X.Y**
+        sudo a2enmod phpX.Y
     * **Attention:** if comaptibility errors with libapache2-mod-php**5** are shown, disable module libapache2-mod-php
 
  5. Configure setoolkit
