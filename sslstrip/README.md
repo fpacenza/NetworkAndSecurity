@@ -70,5 +70,12 @@ Work in group with another collegue in order to work on your own laptop (avoidin
 
  11. On the **Victim** side try to navigate and https website
  
+ 12. Sniff the traffic
+
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/6.%20sniffing.png?raw=true)
+
+ 13. Stop **bettercap**
+
+        quit
 
 **Attention:** modern browser are able to prevent this kind of attack. If you are not to fully replicate the attack on your personal laptop, don't worry, try on the GNS3 laboratory (or study more in order to made it compatible also with modern technologies)
