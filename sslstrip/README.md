@@ -44,7 +44,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
 
         help
 
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/3.%20mudules%20enabled.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/3.%20modules%20enabled.png?raw=true)
 
 
  7. Set the **sslstrip** to **true** and enable **hstshijack** module:
@@ -56,7 +56,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
 
         help
 
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/4.%20mudules%20enabled.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/4.%20modules%20enabled.png?raw=true)
 
  9. Finally, enable **net.probe**, **net.sniff** and **arp.spoof** modules (respect this order!)
 
@@ -66,7 +66,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
 
  10. Check (again and again) enabled modules
 
-![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/5.%20mudules%20enabled.png?raw=true)
+![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/sslstrip/5.%20modules%20enabled.png?raw=true)
 
  11. On the **Victim** side try to navigate and https website
  
