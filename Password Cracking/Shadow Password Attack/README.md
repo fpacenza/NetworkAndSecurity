@@ -43,7 +43,6 @@ The `/etc/shadow` file contains the encrypted passwords of users on the system. 
 
  2. To turn an `/etc/shadow` file into a normal unix password file, we must use the `unshadow` utility. Then we can run `John the Ripper` in order to crack user passwords
 
-        umask 077
         sudo unshadow passwd shadow > password.txt
 
  3. Now you can start cracking **your** password in order to evaluate its security
