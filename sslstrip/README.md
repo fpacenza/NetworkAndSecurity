@@ -33,7 +33,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
         bettercap -iface wlp59s0
  4. Update **bettercap** mudules **(caplets)**
         
-        caplets.updates
+        caplets.update
         caplets.show
 
  5. Check if **hstshijack/hstshijack** is installed

@@ -38,9 +38,12 @@ The `/etc/shadow` file contains the encrypted passwords of users on the system. 
 
 ### **Steps**
  1. First of all we need to make a copy of the `passwd` file and of the `shadow` file. As previosly said, the `shadow` file **\*cannot\*** be *read* by non-superuser thus, the following command must be executed as **root**
+ 
+**BE CAREFUL: THERE IS A DOT (.) AT THE END OF THE 2 COMMANDS** 
         
-        sudo cp /etc/passwd /etc/shadow .
-
+        sudo cp /etc/passwd .
+        sudo cp /etc/shadow .
+        
  2. To turn an `/etc/shadow` file into a normal unix password file, we must use the `unshadow` utility. Then we can run `John the Ripper` in order to crack user passwords
 
         sudo unshadow passwd shadow > password.txt
