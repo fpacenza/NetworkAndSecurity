@@ -1,6 +1,6 @@
 # GNS3 Laboratory Configuration
 
-This guide is useful to setup the GNS3 laboratory in order to be used during the next lab sessions.
+This guide is useful to setup the GNS3 laboratory to be used during the next lab sessions.
 
 We highly recommend to use a Linux/UNIX guest system GNS3 software can be downloaded [here](https://www.gns3.com/software/download)
 
@@ -16,11 +16,11 @@ The following images/binaries must be downloaded before starting the configurati
 
 ## Open Gns3 and create project
 - Run GNS3
-- Create new project
+- Create a new project
 
 ## Internet Configuration
-- Go on the left-bar and select hosts, then drag the appliance *CLOUD* into your project
-- Double click on imported appliance
+- Go to the left-bar and select hosts, then drag the appliance *CLOUD* into your project
+- Double-click on the imported appliance
 - Check **show special ethernet interfaces** checkbox
 - Click on refresh
 - Select **virbr0** interface on dropdown
@@ -34,14 +34,14 @@ libvirt on your machine. On Ubuntu linux system, run the following command:
 - Rename *Cloud* into *InternetAccess* (don’t use spaces for device name)
 
 ## Router Configuration
-The **Cisco C7200** image will be used as router. Cisco image must be imported into GNS3 using a personalized template
+The **Cisco C7200** image will be used as a router. Cisco image must be imported into GNS3 using a personalized template
 
-### Import Cisco 7200 image as template in GNS3
-- Click on FILE -> New template
+### Import Cisco 7200 image as a template in GNS3
+- Click on **FILE -> New template**
 - Select **Install an appliance from the GNS3 server (recommended)** then click on *next*
 - Type **Cisco 7200** into filter search bar
 - Select **Cisco 7200 Dynamips** under the Routers tab and click on install
-- Select *install the appliance on your local computer* then click on next
+- Select *install the appliance on your local computer* then click on the next
 - Check **allow custom files** checkbox
   - If a popup appears, click on **yes**
 - Click on **C7200-adventerprisek9-...-124-24.T5...** voice
@@ -51,15 +51,15 @@ The **Cisco C7200** image will be used as router. Cisco image must be imported i
 - Well Done!
 
 ### Use the Cisco 7200 appliance on our topology
-From now on, the Cisco 7200 router should appears in the available devices inside the hosts section on the left bar
-- Drag and drop Cisco 7200 device into GNS3 hierarchy
-- Double click on the imported router
+From now on, the Cisco 7200 router should appear in the available devices inside the hosts' section on the left bar
+- Drag and drop the Cisco 7200 device into the GNS3 hierarchy
+- Double-click on the imported router
   - Go to the Slots tab
   - Replace C7200-IO-FE into dropdown with **C7200-IO-2FE**
 - Link **FastEthernet0/0** interface of the Cisco 7200 Router with the **virbr0** interface of the Cloud (InternetAccess) appliance imported before
 - Configure the router using a configuration file (router appliance must be stopped)
 
-   - Download Cisco 7200 configuration from course website and open it
+   - Download the Cisco 7200 configuration from the course website and open it
       - *Be careful:* File name must be c7200_startup-config.cfg
    - Copy its content
    - Right-click on the router imported in GNS3
@@ -68,33 +68,33 @@ From now on, the Cisco 7200 router should appears in the available devices insid
    - Replace the current configuration with the ones copied before
    - Click on SaveSwitch Configuration
 
-### Import Cisco 3745 image as template in GNS3
-The Cisco C3745 image will be used as switch
-- Click on FILE -> New template
+### Import Cisco 3745 image as a template in GNS3
+The Cisco C3745 image will be used as a switch
+- Click on **FILE -> New template**
 - Select *Install an appliance from the GNS3 server (recommended)* then
 click on next
 - Type *Cisco 3745* into filter search bar
 - Select Cisco 3745 Dynamips under the Routers tab and click on install
-- Select install the appliance on your local computer then click on next
-- Check allow custom files checkbox
+- Select **Install the appliance on your local computer** then click on the next
+- Check **allow custom files** checkbox
   - If a popup appears, click on yes
-- Click on C3745-adventerprisek9-...-124-25d... voice
-- Click on import (bottom left corner)
-- Select the previously downloaded image of Cisco 3745 and press yes
-- Click (again) on C3745-adventerprisek9-...-124-25d... voice and press next
+- Click on **C3745-adventerprisek9-...-124-25d...**
+- Click on **import** (bottom left corner)
+- Select the previously downloaded image of the Cisco 3745 and press yes
+- Click (again) on C3745-adventerprisek9-...-124-25d... and press next
 - Well Done!
 
 ### Use the Cisco 3745 appliance on our topology
-- Drag and drop Cisco 3745 device into GNS3 hierarchy
-- Double click on the imported router
+- Drag and drop the Cisco 3745 device into the GNS3 hierarchy
+- Double-click on the imported router
 - Go to the Slots tab
   - Remove all adapters from **WIC**
   - Remove the adapter on slot 3
   - Replace adapter on slot 2 with **NM-16ESW**
-- Link **FastEthernet0/1** interface of *Cisco 7200* to **FastEthernet1/15** interface of **Cisco 3745**
-  - **DO NOT USE INTERFACES FASTETHERNET 0/+.** These interfaces are configured for routing. For our purposes we will use interfaces FASTETHERNET 1/* which have been configured for switching
+- Link **FastEthernet0/1** interface of *Cisco 7200* to **FastEthernet1/15** interface of *Cisco 3745*
+  - **DO NOT USE INTERFACES FastEthernet0/*.** These interfaces are configured for routing. For our purposes, we will use interfaces **FastEthernet 1/*** which have been configured for switching
 - Configure the router/switch using a configuration file (router/switch appliance must be stopped)
-  - Download **Cisco 3745** configuration from course website and open it
+  - Download the **Cisco 3745** configuration from the course website and open it
     - Be careful: File name must be **c3745_startup-config.cfg**
   - Copy its content
   - Right-click on the router imported in GNS3
@@ -104,15 +104,14 @@ click on next
   - Click on SaveHosts Configuration
 
 ### Ubuntu Cloud Host
-- For our purposes we will use 3 hosts, based on Ubuntu-20.04-server-clouding
-- Create a new template as we did for Cisco 7200 router and Cisco 3745 switch
-- Click on FILE -> New template
+- For our purposes, we will use 2 hosts, based on Ubuntu-20.04-server-clouding
+- Create a new template as we did for the Cisco 7200 router and Cisco 3745 switch
+- Click on ****FILE -> New template****
 - Select **Install an appliance from the GNS3 server (recommended)**
-then click on next
+then click on the next
 - Type **Ubuntu Cloud Guest** into filter search bar
 - Select **Ubuntu Cloud Guest** under the Guests tab and click on install
-- Select install the appliance on your local computer then click on
-next
+- Select **Install the appliance on your local computer** then click on the next
 - Check **allow custom files** checkbox
   - If a popup appears, click on *yes*
 - Click on **ubuntu-cloud-init-data.iso** under **Ubuntu Cloud Guest version 20.04 (LTS)** voice
@@ -120,43 +119,42 @@ next
 - Select the previously downloaded **ubuntu-cloud-init-data.iso** and press **yes**
 - Click on **ubuntu-20.04-server...** under **Ubuntu Cloud Guest version 20.04 (LTS)** voice
 - Click on import (bottom left corner)
-- Select the previously downloaded ubuntu 20.04 image and press yes
-- Click (again) on ubuntu-20.04-server... under Ubuntu Cloud Guest
-version 20.04 (LTS) voice and press next
+- Select the previously downloaded Ubuntu 20.04 image and press yes
+- Click (again) on ubuntu-20.04-server... under Ubuntu Cloud Guest version 20.04 (LTS) voice and press next
 - Well Done!
 
-After that the import is complete, drag and drop 3 times the image into your GNS3 project 
+The import is complete, drag and drop 2 times the image into your GNS3 project 
 
 ### Raspberry Pi OS Desktop
-A Raspberry Pi image will be used as attacker inside our laboratory sessions
+A Raspberry Pi image will be used as an attacker inside our laboratory sessions
 
 #### Import the image
 - Install VirtualBox
 - Windows users can download the installer [here](https://download.virtualbox.org/virtualbox/6.1.26/VirtualBox-6.1.26-145957-Win.exe)
-- LINUX users you can installing using this [guide](https://www.virtualbox.org/wiki/Linux_Downloads). On Ubuntu 22.04 LTS, you can just execute the following command: `sudo apt install virtualbox`
+- LINUX users you can install using this [guide](https://www.virtualbox.org/wiki/Linux_Downloads). On Ubuntu 22.04 LTS, you can execute the following command: `sudo apt install virtualbox`
 
 #### Create a new Virtual Machine
 - Start VirtualBox
 - Click on NEW
-- Name: Raspbian
-- Type: Linux
-- Version: Debian (32-bit)
+- `Name:` Raspbian
+- `Type:` Linux
+- `Version:` Debian (32-bit)
 - Press on create
-- File size: 25 GB
-- Right click on the new Raspbian machine-
-- Go to settings -> storage
+- `File size:` 25 GB
+- Right-click on the new Raspbian machine-
+- Go to `Settings -> Storage`
 - Click on Add optical drive
 - Select the previously downloaded image (**2021-01-11-raspios... .iso**)
-- Go to network
-  - Attached to: Not Attached
+- Go to `network`
+  - `Attached to:` Not Attached
   - Press OK
-- Double click on the machine to run
+- Double-click on the machine to run
   - If a popup appears (select startup disk...), press Run
-- Follow the instruction!
+- Follow the instructions!
 
 ### Import the new Raspbian host in GNS3
 - Start GNS3
-- Go to Edit -> Preference (or use keyboard shortcut CTRL + SHIFT + P)
+- Go to **Edit -> Preference** (or use keyboard shortcut CTRL + SHIFT + P)
 - Go to VirtualBox VMs and click on New
 - Chose the Raspbian VM and check use as a linked base VM (experimental)
 - Press Finish
