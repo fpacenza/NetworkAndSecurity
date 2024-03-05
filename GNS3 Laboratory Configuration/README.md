@@ -68,9 +68,8 @@ From now on, the Cisco 7200 router should appears in the available devices insid
    - Replace the current configuration with the ones copied before
    - Click on SaveSwitch Configuration
 
-The Cisco C3745 image will be used as switch
-
 ### Import Cisco 3745 image as template in GNS3
+The Cisco C3745 image will be used as switch
 - Click on FILE -> New template
 - Select *Install an appliance from the GNS3 server (recommended)* then
 click on next
@@ -162,8 +161,17 @@ A Raspberry Pi image will be used as attacker inside our laboratory sessions
 - Chose the Raspbian VM and check use as a linked base VM (experimental)
 - Press Finish
 - Click on Edit
-- Go to Network tab and click on Allow GNS3 to use any configured
+- Go to Network tab and click on **Allow GNS3 to use any configured**
 VirtualBox adapter
 - Click on OK
 - Go to QEMU tab
 - Deselect both checkboxes for hardware acceleration
+
+### Configuration
+- Open GNS3
+- Add 1 Raspbian OS in the project
+- Add 2 Ubuntu Images in the project
+- Connect the first Ubuntu image to the Cisco 3745 **FastEthernet1/0** port
+- Connect the second Ubuntu image to the Cisco 3745 **FastEthernet1/1** port
+- Connect the Raspbian image to the Cisco 3745 **FastEthernet1/2** port
+- Start the GNS3 project
