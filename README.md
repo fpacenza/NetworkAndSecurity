@@ -1,6 +1,7 @@
 # Network And Security
 
 ## Exercises - Solutions
+* [GNS3 Laboratory Configuration](https://github.com/fpacenza/NetworkAndSecurity/tree/main/GNS3%20Laboratory%20Configuration)
 * [Symmetric Cryptography](https://github.com/fpacenza/NetworkAndSecurity/tree/main/Symmetric%20Cryptography)
   * [baseNetcatConnection.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Symmetric%20Cryptography/baseNetcatConnection.py)
   * [cryptograph.py](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/Symmetric%20Cryptography/cryptocat.py)
