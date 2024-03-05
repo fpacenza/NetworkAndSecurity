@@ -11,7 +11,7 @@ The following images/binaries must be downloaded before starting the configurati
 - [Cisco C7200](https://mega.nz/#!RZtA0SwD!XBjqI5Dkrienz7tHaYg601Dwq-ypAqWZv8Ut3mFuKoI) (~45 MB)
 - [Cisco C3745](https://mega.nz/#!lR8Q1SpD!5j3lYt9roopuTK6NgHBp9HRM6YP3hq8RiK_nHA7Tktw) (~38 MB)
 - [Ubuntu Cloud Host](http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img) (~580 MB)
-- [Ubuntu Cloud Init Data](http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img) (~128 KB)
+- [Ubuntu Cloud Init Data](https://github.com/asenci/gns3-ubuntu-cloud-init-data/raw/master/ubuntu-cloud-init-data.iso) (~128 KB)
 - [Raspberry Pi OS Desktop](https://downloads.raspberrypi.org/rpd_x86/images/rpd_x86-2021-01-12/2021-01-11-raspios-buster-i386.iso) (~3 GB)
 
 ## Open Gns3 and create project
