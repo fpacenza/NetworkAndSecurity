@@ -92,7 +92,7 @@ click on next
 - Go to the Slots tab
   - Remove all adapters from **WIC**
   - Remove the adapter on slot 3
-  - Replace adapter on slot 2 with **NM-16ESW**
+  - Replace adapter on slot 1 with **NM-16ESW**
 - Link **FastEthernet0/1** interface of *Cisco 7200* to **FastEthernet1/15** interface of *Cisco 3745*
   - **DO NOT USE INTERFACES FastEthernet0/*.** These interfaces are configured for routing. For our purposes, we will use interfaces **FastEthernet 1/*** which have been configured for switching
 - Configure the router/switch using a configuration file (router/switch appliance must be stopped)
