@@ -44,10 +44,11 @@ The **Cisco C7200** image will be used as a router. Cisco image must be imported
 - Select *install the appliance on your local computer* then click on the next
 - Check **allow custom files** checkbox
   - If a popup appears, click on **yes**
-- Click on **C7200-adventerprisek9-...-124-24.T5...** voice
+- Click on **C7200-adventerprisek9-...-124-24.T5... .image** voice
+- Extract the previous downloaded zip
 - Click on import (bottom left corner)
 - Select the previously downloaded image of Cisco 7200 and press yes
-- Click (again) on **C7200-adventerprisek9-...-124-24.T5...** voice and press next
+- Click (again) on **C7200-adventerprisek9-...-124-24.T5.. .image** voice and press next
 - Well Done!
 
 ### Use the Cisco 7200 appliance on our topology
@@ -59,12 +60,12 @@ From now on, the Cisco 7200 router should appear in the available devices inside
 - Link **FastEthernet0/0** interface of the Cisco 7200 Router with the **virbr0** interface of the Cloud (InternetAccess) appliance imported before
 - Configure the router using a configuration file (router appliance must be stopped)
 
-   - Download the Cisco 7200 configuration from the course website and open it
+   - Download the [Cisco 7200 configuration](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/GNS3%20Laboratory%20Configuration/c7200_startup-config.cfg) from the course website and open it
       - *Be careful:* File name must be c7200_startup-config.cfg
    - Copy its content
    - Right-click on the router imported in GNS3
    - Click on edit config
-   - click on ok if the system asks which config file must be edited
+   - Click on ok if the system asks which config file must be edited
    - Replace the current configuration with the ones copied before
    - Click on SaveSwitch Configuration
 
@@ -78,10 +79,11 @@ click on next
 - Select **Install the appliance on your local computer** then click on the next
 - Check **allow custom files** checkbox
   - If a popup appears, click on yes
-- Click on **C3745-adventerprisek9-...-124-25d...**
+- Extract the previous downloaded zip
+- Click on **C3745-adventerprisek9-...-124-25d... .image**
 - Click on **import** (bottom left corner)
 - Select the previously downloaded image of the Cisco 3745 and press yes
-- Click (again) on C3745-adventerprisek9-...-124-25d... and press next
+- Click (again) on **C3745-adventerprisek9-...-124-25d... .image** and press next
 - Well Done!
 
 ### Use the Cisco 3745 appliance on our topology
@@ -94,7 +96,7 @@ click on next
 - Link **FastEthernet0/1** interface of *Cisco 7200* to **FastEthernet1/15** interface of *Cisco 3745*
   - **DO NOT USE INTERFACES FastEthernet0/*.** These interfaces are configured for routing. For our purposes, we will use interfaces **FastEthernet 1/*** which have been configured for switching
 - Configure the router/switch using a configuration file (router/switch appliance must be stopped)
-  - Download the **Cisco 3745** configuration from the course website and open it
+  - Download the [Cisco 3745 configuration](https://raw.githubusercontent.com/fpacenza/NetworkAndSecurity/main/GNS3%20Laboratory%20Configuration/C3745_startup-config.cfg) from the course website and open it
     - Be careful: File name must be **c3745_startup-config.cfg**
   - Copy its content
   - Right-click on the router imported in GNS3
