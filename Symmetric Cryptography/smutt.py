@@ -18,9 +18,9 @@ def main(ef: str, cf: str, sf: str, address: str, pwd: str = ""):
             steghide_args = ["steghide", "embed", "-ef", ef, "-cf", cf, "-sf", sf, "-p", pwd]
             steghide = subprocess.Popen(steghide_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             steghide.communicate()
-        console.log(f"[bold green]Hid {ef} into {cf} successfully![/bold green]")
+        console.log(f"[bold green]{ef} hidden into {cf} successfully. New image written in {sf}![/bold green]")
 
-        with console.status(f"Sending email to {address} with attacched {cf}..."):
+        with console.status(f"Sending email to {address} with attacched {sf}..."):
             echo = subprocess.Popen(["echo", "Steghide email test"], stdout=subprocess.PIPE)
             subprocess.check_output(["mutt", "-s", "Steghide email test", address, "-a", sf], stdin=echo.stdout, stderr=subprocess.PIPE)
             console.log(f"[bold red]Email Sent[/bold red]")

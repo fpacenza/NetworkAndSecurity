@@ -48,9 +48,13 @@ In order to execute the script follow these steps:
  * `python3 smutt.py <path/to/file/to/embed> <path/to/image.jpg> output.jpg <your_email@domain.com> --pwd pass`
 
  ### Test `steghide` command
-* Embed the file `example.txt` into `image.jpg`
+* Embed the file `example.txt` into `image.jpg` --> `image.jpg` will be overwritten
 
       steghide embed -ef example.txt -cf image.jpg -p mysecretkey
+
+* Embed the file `example.txt` into `image.jpg` --> `image.jpg` will **NOT** be overwritten; a new output file will be created
+
+      steghide embed -ef example.txt -cf image.jpg -sf output.jpg -p mysecretkey
 
 * Get information about a possible stegofile `image.jpg`
 
