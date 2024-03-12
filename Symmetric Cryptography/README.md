@@ -16,6 +16,28 @@ In order to execute the script follow these steps:
  * **BE CAREFUL:** password and decrypt algorithm **have to be** the same in server and client mode
  * Type some text in client console
 
+ ### How to use `openssl enc` command via examples
+ 1. **Encrypt and decrypt a file:**:
+    * **Encrypt:**
+    
+          openssl enc -e --algorithm -aes-256-cbc -k mysecretkey -pbkdf2 -base64 -in plaintext_file.txt -out crypted_file.txt
+
+    * **Decrypt:**
+    
+          openssl enc -d --algorithm -aes-256-cbc -k mysecretkey -pbkdf2 -base64 -in crypted_file.txt -out plaintext_file.txt
+
+ 2. **Encrypt and decrypt text via STDIN and show the result via STDOUT:**
+    * **Encrypt:**
+    
+          echo "Hello" | openssl enc -e --algorithm -aes-256-cbc -k mysecretkey -pbkdf2 -base64
+
+    * **Decrypt:**
+    
+          echo "U2FsdGVkX19gId+esKSi4m118OEiotwCH4tjaaMvCvM=" | openssl enc -d --algorithm -aes-256-cbc -k mysecretkey -pbkdf2 -base64
+
+
+
+
  ## Smutt
 `smutt.py` is a Python script able to hide a file inside an image and send the output image as attachment using mutt service
 
