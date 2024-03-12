@@ -46,3 +46,22 @@ In order to execute the script follow these steps:
  * Install `steghide` command `sudo apt install steghide`
  * Run the `smutt.py` script
  * `python3 smutt.py <path/to/file/to/embed> <path/to/image.jpg> output.jpg <your_email@domain.com> --pwd pass`
+
+ ### Test `steghide` command
+* Embed the file `example.txt` into `image.jpg`
+
+      steghide embed -ef example.txt -cf image.jpg -p mysecretkey
+
+* Get information about a possible stegofile `image.jpg`
+
+      steghide info image.jpg
+
+* Extract the embedded data from the stegofile `image.jpg`
+
+      steghide extract -sf image.jpg -p mysecretkey
+
+
+ ### Test `mutt` command
+Try to send an email running the following command via terminal
+
+      echo "body of the email" | mutt -s "subject of the email" your_personal_email_address@something.com -a image.jpg
