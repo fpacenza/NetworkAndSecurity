@@ -38,7 +38,7 @@ In order to execute the script follow these steps:
 
 
 
- ## Smutt
+## Smutt
 `smutt.py` is a Python script able to hide a file inside an image and send the output image as attachment using mutt service
 
 In order to execute the script follow these steps:
@@ -47,7 +47,7 @@ In order to execute the script follow these steps:
  * Run the `smutt.py` script
  * `python3 smutt.py <path/to/file/to/embed> <path/to/image.jpg> output.jpg <your_email@domain.com> --pwd pass`
 
- ### Test `steghide` command
+### Test `steghide` command
 * Embed the file `example.txt` into `image.jpg` --> `image.jpg` will be overwritten
 
       steghide embed -ef example.txt -cf image.jpg -p mysecretkey
@@ -65,7 +65,27 @@ In order to execute the script follow these steps:
       steghide extract -sf image.jpg -p mysecretkey
 
 
- ### Test `mutt` command
-Try to send an email running the following command via terminal
+### Test `mutt` command
+
+#### Step 1 - Installation
+Execute the following command via terminal
+
+      sudo apt install mutt
+
+#### Step 2 - Configuration
+ 1. Create the necessary directories
+
+            mkdir -p ~/.mutt/cache/headers
+            mkdir ~/.mutt/cache/bodies
+            touch ~/.mutt/certificates
+
+ 2. Create a configuration file of mutt: `muttrc`
+
+ 3. Copy the content of the `muttrc` from the example configuration on `github` to your `muttrc` file
+
+ 4. Change the email address and password with your personal access data
+
+
+#### Step 3 - Test the `mutt` command
 
       echo "body of the email" | mutt -s "subject of the email" your_personal_email_address@something.com -a image.jpg
