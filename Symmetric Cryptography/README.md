@@ -75,9 +75,9 @@ Execute the following command via terminal
 #### Step 2 - Configuration
  1. Create the necessary directories
 
-            mkdir -p ~/.mutt/cache/headers
-            mkdir ~/.mutt/cache/bodies
-            touch ~/.mutt/certificates
+        mkdir -p ~/.mutt/cache/headers
+        mkdir ~/.mutt/cache/bodies
+        touch ~/.mutt/certificates
 
  2. Create a configuration file of mutt: `muttrc`
 
