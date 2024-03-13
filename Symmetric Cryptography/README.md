@@ -88,4 +88,4 @@ Execute the following command via terminal
 
 #### Step 3 - Test the `mutt` command
 
-      echo "body of the email" | mutt -s "subject of the email" your_personal_email_address@something.com -a image.jpg
+    echo "body of the email" | mutt -s "subject of the email" your_personal_email_address@something.com -a image.jpg
