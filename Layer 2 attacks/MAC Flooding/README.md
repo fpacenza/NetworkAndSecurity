@@ -1,6 +1,40 @@
 # MAC FLOODING
 
-A MAC flooding is a technique employed to compromise the security of network switches. The attack works by forcing legitimate MAC table contents out of the switch and forcing a unicast flooding behavior potentially sending sensitive information to portions of the network where it is not normally intended to go
+A **MAC flooding attack**, also known as **switch flooding**, is a cyber attack technique that exploits vulnerabilities in network switches on switched Local Area Networks (LANs). The attack involves sending a large amount of packets with forged Media Access Control (MAC) addresses to the switch.
+
+## How does a MAC flooding attack work?
+
+1. The attacker bombards the network with packets containing fake MAC addresses.
+
+2. The switch receives these packets and updates its Content Addressable Memory (CAM) table by associating the fake MAC addresses with network ports.
+
+3. The CAM table has a limited capacity to store MAC addresses. When the table fills up, new forged MAC addresses overwrite legitimate ones.
+
+4. The switch, confused about which port certain MAC addresses belong to, goes into `fail open mode`.
+
+5. In `fail open mode`, the switch behaves like a hub, sending all packets to all ports, including the attacker's traffic.
+
+6. Since the attacker is connected to the network, they can intercept and analyze all the traffic flowing through it, potentially including sensitive data and passwords.
+
+
+## Impacts of a MAC Flooding Attack:
+
+**Service Disruption:** The network becomes unusable or very slow for legitimate users.
+
+**Data Sniffing:** The attacker can intercept and read sensitive data like passwords and financial information.
+
+**Denial-of-Service (DoS):** The attacker can render the network inaccessible to legitimate users.
+
+## How to Defend Against a MAC Flooding Attack:
+
+- Enable MAC flooding protection on your switch.
+
+- Use switches with large CAM tables.
+Segment your network into VLANs to limit the attack's impact.
+
+- Implement authentication and encryption techniques to protect your data.
+
+# How to run the exercise
 
 To execute the full exercise, follow these steps
 
