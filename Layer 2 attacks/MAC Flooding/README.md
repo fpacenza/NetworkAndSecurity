@@ -6,7 +6,7 @@ A **MAC flooding attack**, also known as **switch flooding**, is a cyber attack 
 
 1. The attacker bombards the network with packets containing fake MAC addresses.
 
-2. The switch receives these packets and updates its Content Addressable Memory (CAM) table by associating the fake MAC addresses with network ports.
+2. The switch receives these packets and updates its `Content Addressable Memory (CAM)` table by associating the fake MAC addresses with network ports.
 
 3. The CAM table has a limited capacity to store MAC addresses. When the table fills up, new forged MAC addresses overwrite legitimate ones.
 
