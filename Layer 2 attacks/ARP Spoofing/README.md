@@ -38,7 +38,7 @@ To execute the full exercise, follow these steps
 * Run the GNS3 lab
 * Connect to **host_1** and **host_2** using telnet command `telnet localhost <PORT>`
 * Execute the `ARPSpoofingChallengeSender.py <HOST_1_SRC_IP> <HOST_2_DST_IP>` script on **host_1**
-* Connect to the **Attacker** host and execute the `arp_spoofer.py <HOST_2_MAC> <HOST_2_SRC_IP>` script
+* Connect to the **Attacker** host and execute the `arp_spoofer.py <HOST_2_SRC_IP>` script
 * Execute `sudo tshark -Y "udp && ip.dst==<HOST_2_IP>" -T fields -e data > raw-data.txt`  
 * Wait some seconds
 * Convert the `raw-data.txt` file in **_base64_** `cat raw-data.txt | xxd -r -p > output.txt`
