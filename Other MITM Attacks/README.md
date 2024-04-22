@@ -24,7 +24,7 @@ Sending and receiving IP packets is a primary way in which networked computers a
 * Choose the IP and MAC address of the machine you want to attack (we will choose the ip addres of the **ubuntu-1 host** for simplicity)
 * Execute the `ip_spoofer.py` script as superuser
 
-        sudo python3 ip_spoofer.py <Victim_MAC_ADDRESS> <Victim_IP_ADDRESS>
+        sudo python3 ip_spoofer.py <Victim_IP_ADDRESS>
 * Connect again to **R1** and check the current IP/MAC assignment using the followng command
 
         show ip arp
