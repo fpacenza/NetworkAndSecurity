@@ -64,7 +64,7 @@ Work in group with another collegue in order to work on your own laptop (avoidin
 
  11. Navigate **www.facebook.com** from the **Victim** pc
  12. Fillin **username** and **password** fields
- 13. Come back to **Attacker** machine e see in **plain text** the username and password as filled in by the **Victim**
+ 13. Come back to **Attacker** machine to see in **plain text** the username and password as filled in by the **Victim**
  ![alt text](https://github.com/fpacenza/NetworkAndSecurity/blob/main/Phishing/2.phishing.png?raw=true)
 
 **Attention:** if the **Victim** browser has the auto-redirect to https option enabled, the **Victim** will be redirected to **https** web page so, you need to enable also the **ssl** module on your **apache2** webserver 
